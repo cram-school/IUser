@@ -16,4 +16,4 @@ export const query = (sql) => new Promise(resolve => {
       resolve(results)
     })
   })
-})
+}) 
