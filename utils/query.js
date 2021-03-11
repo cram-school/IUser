@@ -11,7 +11,7 @@ export const query = (sql) => new Promise(resolve => {
       // 结束会话
       connection.release();
       if (error) {
-        resolve(false)
+        resolve(false) 
       }
       resolve(results)
     })
