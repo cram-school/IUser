@@ -1,11 +1,24 @@
-export function addTodo(text) {
-  return { type: ADD_TODO, text }
+import {
+  ADD,
+  MINUS
+} from '../constants/counter'
+
+export const add = () => {
+  return {
+    type: ADD
+  }
+}
+export const minus = () => {
+  return {
+    type: MINUS
+  }
 }
 
-export function toggleTodo(index) {
-  return { type: TOGGLE_TODO, index }
-}
-
-export function setVisibilityFilter(filter) {
-  return { type: SET_VISIBILITY_FILTER, filter }
+// 异步的action
+export function asyncAdd () {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(add())
+    }, 2000)
+  }
 }

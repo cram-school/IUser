@@ -15,9 +15,3 @@ export default function SetUpRoutes () {
   ]
   return (<div><BrowserRouter>{renderRoutes(routes)}</BrowserRouter></div>)
 }
-
-// export default class setUpRoutes extends Component {
-//   render() {
-//     return (<div><Router>{renderRoutes(routes)}</Router></div>)
-//   }
-// }
