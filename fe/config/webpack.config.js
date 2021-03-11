@@ -77,6 +77,8 @@ const hasJsxRuntime = (() => {
   }
 })();
 
+const px2rem = require('postcss-px2rem')
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function (webpackEnv) {
@@ -129,6 +131,7 @@ module.exports = function (webpackEnv) {
               },
               stage: 3,
             }),
+            px2rem({remUnit: 37.5}),
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
